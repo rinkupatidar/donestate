@@ -1,0 +1,23 @@
+@import '/styles/sass/utilities/mixins.sass';
+.loading_section {
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_overlay {
+  @include overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: $scheme-main;
+  &.low_opacity {
+    background-color: bulmaRgba($scheme-main, 0.8);
+  }
+  &[data-top='true'] {
+    align-items: flex-start;
+    padding: 20% 0;
+  }
+}

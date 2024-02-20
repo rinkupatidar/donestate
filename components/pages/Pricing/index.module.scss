@@ -1,0 +1,160 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+
+.overflow
+{
+    @include mobilemin
+        {
+        overflow:scroll;
+        }   
+}
+
+.item {
+    padding: 2rem !important;
+    // background-color: bulmaLighten($black, 5%);
+    background-color: bulmaLighten($white, 5%);
+    border-radius: 10px;
+    text-align: center;
+}
+.feature_item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    svg {
+        fill: $info;
+    }
+    margin: 0.75rem 0;
+    font-weight: $weight-medium;
+}
+
+.mainLanding {
+    background: #f6fbff;
+    color: black;
+    height: auto;
+    font-family: 'Lato', sans-serif;
+  }
+  .Maxwidth{
+    max-width: 1300px;
+    padding: 0px 40px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.green
+{
+    background-color: transparent;
+    // border-color: #8FB440;
+    border: 2px solid #8FB440;
+    border-radius:9999px;
+    color: #000000b3;
+    font-weight: 700;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    white-space: nowrap;
+}
+.table{
+background-color:#0d96f8 !important;
+    color: hsl(0deg, 0%, 100%)!important;
+    border-radius: $radius;
+    font-size: 1.25rem;
+    font-weight: 700 !important;
+    // margin-top: 0.75rem;
+    width: 100%;
+    @include mobilemin
+    {
+    width:1000px;
+    }
+}
+.tablewidth{
+        @include mobilemin
+        {
+        width:1000px;
+        }
+    }
+.tablerow{
+    font-size: 14px;
+        color:#000!important;
+        display: grid;
+        grid-gap: 0.5rem;
+        gap: 0.5rem;
+        padding: 0.5rem 0.2rem!important;
+        border-radius: 4px;
+        text-align: right;
+        border-bottom: 1px solid rgba(129, 162, 182, 0.2);
+       
+    }
+    .tablerow:hover {
+        background-color: #fff!important;
+        opacity: 1;
+        outline:0px!important;
+        box-shadow: rgba(129, 162, 182, 0.2) 0px 2px 18px 0px;
+}
+    .tablevalue {
+        outline: 0px solid hsl(0deg, 0%, 21%);
+    }
+    .tablevalue:hover {
+        background-color: transparent!important;
+        font-weight: 700;
+        background-color: #171717
+    }
+  
+    .grid {
+        display: grid;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        color: $black;
+        text-align: center;
+        // font-size: 14px;
+        border-bottom: 1px solid rgba(129, 162, 182, 0.2);
+       
+            background-color: #fff;
+      
+        &.highlight {
+            background-color: $grey-darkest;
+            > .value {
+                font-weight: $weight-bold;
+                background-color: $grey-darkest;
+            }
+        }
+        &.is_info {
+            background-color: $ui-red !important;
+            color: $white;
+        
+            .value {
+                text-transform: capitalize;
+            }
+        }
+        &.is_hover {
+            &:not(.is_info) {
+                &:hover {
+                    background-color:rgba(129, 162, 182, 0.2);
+                    opacity: 1;
+                    border-radius: $radius;
+                    outline: 1px solid rgba(129, 162, 182, 0.2);
+                    > .value {
+                        font-weight: $weight-bold;
+                        // some row's have sticky items when you scroll to the right, this is to make sure the sticky items are still visible, with the appropriate styles
+                        background-color:rgba(129, 162, 182, 0.2);
+                    }
+                }
+            }
+        }
+    }
+    
+    .value {
+        & :first-child {
+            border-radius: 3px;
+        }
+        &.is_yellow {
+            color: $yellow;
+        }
+        &.is_green {
+            color: $green;
+        }
+        &.is_red {
+            color: $red;
+        }
+    }

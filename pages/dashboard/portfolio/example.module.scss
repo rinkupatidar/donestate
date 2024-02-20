@@ -1,0 +1,52 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+@import '/styles/sass/utilities/mixins.sass';
+
+
+.displayBtn {
+  display: flex;
+  justify-content: end;
+  margin: 12px 0px;
+}
+.inputPortfolio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+.menu_wrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  width: max-content;
+  min-width: 160px;
+  right: 128px;
+  .menu {
+    padding: 0.5rem;
+    border-radius: $radius;
+    background-color: $black-bis;
+    border: 1px solid $grey-darkest;
+    .menu_item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem;
+      color: $grey;
+      transition: color $trans;
+      border-radius: $radius;
+      svg {
+        path {
+          transition: fill $trans, stroke $trans;
+          fill: $grey;
+        }
+      }
+      &:hover {
+        color: $white;
+        background-color: $grey-darkest;
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+
+.wrapper {
+    position: relative;
+    width: 545px;
+}
+
+.search_modal_wrapper {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(calc(100% + 10px));
+    width: 100%;
+}
+.search_modal {
+    background-color: $grey-darkest;
+    border-radius: $radius;
+    padding: $general-gap $general-gap / 2;
+    .item {
+        padding: $general-gap / 2;
+        color: $grey-light;
+        border-radius: $radius;
+        transition: background-color $trans, color $trans;
+        cursor: pointer;
+        &:hover {
+            background-color: $grey-darker;
+            color: $white;
+        }
+    }
+}

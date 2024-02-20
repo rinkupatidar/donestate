@@ -1,0 +1,12 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-size: $size-4;
+    font-weight: $weight-medium;
+    text-transform: capitalize;
+    margin-bottom: 0.75rem;
+    svg {
+        fill: $grey;
+    }
+}

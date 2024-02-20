@@ -1,0 +1,121 @@
+// Colors
+
+$black:        hsl(0, 0%, 4%) !default
+$black-bis:    hsl(0, 0%, 9%) !default
+$black-ter:    hsl(0, 0%, 14%) !default
+
+$grey-darkest:  hsl(0, 0%, 12%) !default
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+$grey-lightest: hsl(0, 0%, 93%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+$turquoise:    hsl(171, 100%, 41%) !default
+$cyan:         hsl(207, 61%,  53%) !default
+$purple:       hsl(271, 100%, 71%) !default
+
+// General Stock Colors
+$green-lighter: hsla(141, 99%, 85%, 1) !default
+$green-light: hsla(141, 99%, 67%, 1) !default
+$green: hsla(141, 99%, 49%, 1) !default
+$green-dark: hsla(141, 99%, 28%, 1) !default
+$green-darker: hsla(141, 99%, 17%, 1) !default
+
+
+$red-lighter: hsla(353, 92%, 87%, 1)!default
+$red-light: hsla(353, 92%, 70%, 1)!default
+$red: hsla(353, 92%, 58%, 1)!default
+$red-dark: hsla(353, 92%, 39%, 1)!default
+$red-darker: hsla(353, 92%, 28%, 1)!default
+
+$blue-lighter:hsla(205, 94%, 87%, 1) !default
+$blue-light:hsla(205, 94%, 67%, 1) !default
+$blue:hsla(205, 94%, 51%, 1) !default
+$blue-dark:hsla(205, 94%, 38%, 1) !default
+$blue-darker:hsla(205, 94%, 28%, 1) !default
+
+$orange-lighter: hsla(16, 78%, 66%, 1) !default
+$orange-light: hsla(16, 78%, 66%, 1) !default
+$orange: hsla(16, 78%, 66%, 1) !default
+$orange-dark: hsla(16, 78%, 66%, 1) !default
+$orange-darker: hsla(16, 78%, 66%, 1) !default
+
+$yellow-lighter: hsla(35, 97%, 86%, 1) !default
+$yellow-light: hsla(35, 97%, 67%, 1) !default
+$yellow: hsla(35, 97%, 55%, 1) !default
+$yellow-dark: hsla(35, 97%, 36%, 1) !default
+$yellow-darker: hsla(35, 97%, 21%, 1) !default
+
+
+$pink-lighter: hsla(327, 97%, 90%,1) !default
+$pink-light: hsla(327, 97%, 75%,1) !default
+$pink: hsla(327, 97%, 63%,1) !default
+$pink-dark: hsla(327, 97%, 43%,1) !default
+$pink-darker: hsla(327, 97%, 23%,1) !default
+
+$ui-red : hsla(15, 77%, 19%, 1) !default
+
+
+// Typography
+
+$family-monospace: monospace !default
+$render-mode: optimizeLegibility !default
+
+$size-1: 3rem !default
+$size-2: 2.5rem !default
+$size-3: 2rem !default
+$size-4: 1.5rem !default
+$size-5: 1.25rem !default
+$size-6: 1rem !default
+$size-7: 0.75rem !default  //12px
+$size-8: 1.70rem !default 
+
+
+$weight-light: 300 !default
+$weight-normal: 400 !default
+$weight-medium: 500 !default
+$weight-semibold: 600 !default
+$weight-bold: 700 !default
+
+// Spacing
+
+$block-spacing: 1.5rem !default
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default
+$tabletmin: 768px !default
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap) !default
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap) !default
+$widescreen-enabled: true !default
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap) !default
+$fullhd-enabled: true !default
+$breakpoints: ("mobile": ("until": $tablet), "tablet": ("from": $tablet), "tablet-only": ("from": $tablet, "until": $desktop), "touch": ("from": $desktop), "desktop": ("from": $desktop), "desktop-only": ("from": $desktop, "until": $widescreen), "until-widescreen": ("until": $widescreen), "widescreen": ("from": $widescreen), "widescreen-only": ("from": $widescreen, "until": $fullhd), "until-fullhd": ("until": $fullhd), "fullhd": ("from": $fullhd)) !default
+
+// Miscellaneous
+
+$easing: ease-out !default
+$radius-small: 2px !default
+$radius: 4px !default
+$radius-large: 6px !default
+$radius-rounded: 9999px !default
+$speed: 86ms !default
+
+// Flags
+
+$variable-columns: true !default
+$rtl: false !default
+
+$trans: .2s ease

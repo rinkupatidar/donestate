@@ -1,0 +1,10 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+.advertisement {
+    background-color: $grey;
+    margin: $general-gap 0;
+    padding: 5rem;
+    height: 100%;
+    border-radius: $radius-large;
+    display: flex;
+    justify-content: center;
+}

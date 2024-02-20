@@ -1,0 +1,104 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+
+.menu_wrapper {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    width: max-content;
+    min-width: 160px;
+    
+    right: 0;
+    // z-index: 1;
+    .menu {
+      padding: 0.5rem;
+      border-radius: $radius;
+      background-color: $black-bis;
+      border: 1px solid $grey-darkest;
+      .menu_item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        color: $grey;
+        transition: color $trans;
+        border-radius: $radius;
+        svg {
+          path {
+            transition: fill $trans, stroke $trans;
+            fill: $grey;
+          }
+        }
+        &:hover {
+          color: $white;
+          background-color: $grey-darkest;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+      .menu_item_edit {
+        display: flex;
+        align-items: center;
+        // gap: 0.75rem;
+        // padding: 0.5rem;
+        padding-bottom: calc(0.5em - 0px);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: calc(0.5em - 0px);
+        margin: 0.5em;
+        justify-content: left;
+        color: $black;
+        transition: color $trans;
+        border-width: 1px;
+        border-radius: 2px;
+        background-color: transparent;
+        border-color: hsl(35, 97%, 55%);
+        color: hsl(35, 97%, 55%);
+        border: 1px solid;
+        font-size: 0.75rem;
+  
+        svg {
+          path {
+            transition: fill $trans, stroke $trans;
+            fill: hsl(35, 97%, 55%);
+          }
+        }
+        &:hover {
+          color: hsl(0, 0%, 4%);
+          background-color: hsl(35, 97%, 55%);
+          svg {
+            path {
+              fill: hsl(0, 0%, 4%);
+            }
+          }
+        }
+      }
+      .menu_item_new {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        color: $grey-light;
+        transition: color $trans;
+        border-radius: $radius;
+        svg {
+          path {
+            transition: fill $trans, stroke $trans;
+            fill: $grey;
+          }
+        }
+        &:hover {
+          color: $white;
+          background-color: $grey-darkest;
+          font-size: 17px;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }

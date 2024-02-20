@@ -1,0 +1,20 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+@import '/styles/sass/utilities/mixins.sass';
+
+.grid {
+  @include general-border;
+  height: 100%;
+  padding: $general-gap;
+  width: fit-content;
+}
+
+.wrapper {
+  max-height: 247px;
+  overflow: auto;
+  padding-bottom: 0.3em;
+  width: 100%;
+  &:hover {
+    overflow-x: auto;
+    padding-bottom: 0;
+  }
+}

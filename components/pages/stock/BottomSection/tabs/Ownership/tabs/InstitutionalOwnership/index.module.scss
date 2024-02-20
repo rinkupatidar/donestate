@@ -1,0 +1,12 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+.container {
+    width: 100%;
+    display: flex;
+    gap: $general-gap;
+    .left {
+        min-width: 40%;
+    }
+    .right {
+        width: 60%;
+    }
+}

@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4175],{414:function(n,_,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/portfolio-view/MainSectionView",function(){return i(77639)}])}},function(n){n.O(0,[5445,1228,5520,8907,6898,6556,3777,1057,9401,1778,696,4544,2200,7151,3658,1930,6314,7639,9774,2888,179],function(){return n(n.s=414)}),_N_E=n.O()}]);

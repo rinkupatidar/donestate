@@ -1,0 +1,79 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+
+.analyst_price_targets {
+    @include general-border;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .analyst_item_wrapper {
+        max-height: 300px;
+        overflow: auto;
+        padding-right: 0.5rem;
+        margin-right: -0.2rem;
+        padding: 1px; // so that the first items outline is not hidden ;
+    }
+
+    .analyst_item {
+        background-color: bulmaDarken($grey-darkest, 6%);
+        transition: background-color $trans;
+        cursor: pointer;
+        border-radius: $radius;
+        height: min-content;
+        display: block;
+        margin-bottom: 0.75rem;
+        color: $text;
+        .analyst_header {
+            flex: 1;
+            padding: 0.5rem;
+            .analyst_title {
+                height: 1.5rem;
+                overflow: hidden;
+            }
+        }
+
+        .analyst_description {
+            height: 0rem;
+            overflow: hidden;
+        }
+        &:hover {
+            outline: $general-border;
+            overflow: hidden;
+            background-color: $black-bis;
+            border-radius: $radius;
+            .content {
+            }
+        }
+    }
+}
+
+.snapshot {
+    @include general-border;
+    overflow: hidden;
+    position: relative;
+    padding: 0.75rem;
+}
+
+.price_target_estimates {
+    @include general-border;
+    position: relative;
+    padding: 0.75rem;
+}
+
+.earnings_surprises {
+    @include general-border;
+    position: relative;
+    padding: 0.75rem;
+    .chart_wrapper {
+        grid-column: 2 / 6;
+        text-align: left;
+    }
+}
+
+.price_estimates {
+    @include general-border;
+    position: relative;
+    padding: 0.75rem;
+}

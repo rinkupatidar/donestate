@@ -1,0 +1,44 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+.grid {
+  width: fit-content;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  padding-bottom: 0.3em;
+  width: 100%;
+  &:hover {
+    overflow-x: auto;
+    padding-bottom: 0;
+  }
+}
+.sticky {
+  position: sticky;
+  left: 0px;
+  z-index: 1;
+  background-color: $black;
+  padding-right: 1rem;
+  margin-right: -0.5rem;
+  border-radius: $radius;
+  // box-shadow: 15px 0px 5px $black;
+  &.is_info {
+    background-color: $ui-red;
+    // box-shadow: 15px 0px 5px $ui-red;
+  }
+}
+
+.sticky_2 {
+  @extend .sticky;
+  left: 50px;
+}
+
+.overflow_text {
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+    display: block;
+    float: left;
+  }
+}

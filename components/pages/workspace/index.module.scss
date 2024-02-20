@@ -1,0 +1,40 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+
+.wrapper {
+  height: 100vh;
+  widows: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  > *:first-child {
+    border-right: 1px solid $grey-darker;
+  }
+}
+
+.item {
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: $radius-small;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  .desc {
+    color: $grey;
+    font-size: 10px !important;
+    margin-left: 4px;
+  }
+  &:hover {
+    background-color: $grey-darkest;
+  }
+  &[data-selected='true'] {
+    background-color: $warning;
+    color: $black;
+    font-weight: $weight-semibold;
+    svg {
+      fill: $black !important;
+    }
+    .desc {
+      color: $grey-darker;
+    }
+  }
+}

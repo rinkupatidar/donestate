@@ -1,0 +1,40 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+@import '/styles/sass/utilities/mixins.sass';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  gap: $general-gap;
+}
+.grid {
+  @include general-border;
+  padding: $general-gap;
+  width: 100%;
+}
+
+.key_metrics_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  .key_metrics_item {
+    .head {
+      font-size: $size-7;
+      color: $grey;
+      text-transform: uppercase;
+    }
+    .content {
+      font-weight: $weight-bold;
+      font-family: $family-secondary;
+      font-size: $size-6;
+      color: $yellow;
+    }
+  }
+}
+.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  margin-bottom: 0.2rem;
+  color: $grey;
+  font-weight: $weight-bold;
+}

@@ -1,0 +1,83 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-size: $size-4;
+    font-weight: $weight-medium;
+    text-transform: capitalize;
+    margin-bottom: 0.75rem;
+    svg {
+        fill: $grey;
+    }
+}
+
+.section_wrapper {
+    gap: $general-gap;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub_section_wrapper {
+    @include general-border;
+    @extend .section_wrapper;
+    padding: $general-gap;
+    gap: initial;
+}
+$hover_color: bulmaDarken($grey-darkest, 3%);
+.grid {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    border-radius: $radius;
+    color: $yellow;
+    text-align: center;
+    font-size: 14px;
+    &.is_dark {
+        background-color: $grey-darkest;
+    }
+    &.highlight {
+        background-color: $grey-darkest;
+        > .value {
+            font-weight: $weight-bold;
+            background-color: $grey-darkest;
+        }
+    }
+    &.is_info {
+        background-color: $ui-red !important;
+        color: $white;
+        .value {
+            text-transform: capitalize;
+        }
+    }
+    &.is_hover {
+        &:not(.is_info) {
+            &:hover {
+                background-color: $hover_color;
+                opacity: 1;
+                outline: 1px solid $grey-darker;
+                > .value {
+                    font-weight: $weight-bold;
+                    // some row's have sticky items when you scroll to the right, this is to make sure the sticky items are still visible, with the appropriate styles
+                    background-color: $hover_color;
+                }
+            }
+        }
+    }
+}
+
+.value {
+    & :first-child {
+        border-radius: 3px;
+    }
+    &.is_yellow {
+        color: $yellow;
+    }
+    &.is_green {
+        color: $green;
+    }
+    &.is_red {
+        color: $red;
+    }
+}

@@ -1,0 +1,67 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+.footer {
+    position: fixed;
+    z-index: 100000000000;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    // background-color: $scheme-main-new;
+    background-color: $scheme-main;
+    border-top: $general-border;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    justify-content: space-between;
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+    }
+}
+
+.footerrow
+{
+    display: flex;
+    @include mobilemin{
+        display: block;
+      }
+}
+.footercol
+{
+    margin-left: 1rem !important;
+    margin-bottom: 1rem !important;
+    @include mobile{
+    margin-left: 0rem !important;
+    margin-bottom: 0rem !important;
+      }
+}
+.footercol1
+{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    margin-bottom: 1rem !important;
+    @include mobile{
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+      }
+}
+.Maxwidth{
+    max-width: 1300px;
+    margin: 0 auto; 
+  }
+.normal_footer {
+    // p-6 has-background-grey-darkest
+    padding: 3rem;
+    // background-color: bulmaLighten($black, 2%);
+}
+
+.white
+{
+    color:#fff;
+    @include mobilemin{
+        margin-top: 20px;
+      }
+}

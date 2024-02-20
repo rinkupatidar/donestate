@@ -1,0 +1,9 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8170],{68170:function(t,e,n){var o,r,i; /**
+ * @license Highstock JS v10.3.3 (2023-01-20)
+ *
+ * Indicator series type for Highcharts Stock
+ *
+ * (c) 2010-2021 Sebastian Bochan
+ *
+ * License: www.highcharts.com/license
+ */ i=function(t){"use strict";var e=t?t._modules:{};function n(t,e,n,o){t.hasOwnProperty(e)||(t[e]=o.apply(null,n),"function"==typeof CustomEvent&&window.dispatchEvent(new CustomEvent("HighchartsModuleLoaded",{detail:{path:e,module:t[e]}})))}n(e,"Stock/Indicators/TrendLine/TrendLineIndicator.js",[e["Core/Series/SeriesRegistry.js"],e["Core/Utilities.js"]],function(t,e){var n,o=this&&this.__extends||(n=function(t,e){return(n=Object.setPrototypeOf||({__proto__:[]})instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])})(t,e)},function(t,e){function o(){this.constructor=t}n(t,e),t.prototype=null===e?Object.create(e):(o.prototype=e.prototype,new o)}),r=t.seriesTypes.sma,i=e.extend,s=e.merge,a=e.isArray,p=function(t){function e(){var e=null!==t&&t.apply(this,arguments)||this;return e.data=void 0,e.options=void 0,e.points=void 0,e}return o(e,t),e.prototype.getValues=function(t,e){var n,o,r,i,s,p=t.xData,u=t.yData,c=[],d=[],f=[],l=0,y=0,h=0,v=0,_=p.length,m=e.index;for(r=0;r<_;r++)i=p[r],s=a(u[r])?u[r][m]:u[r],l+=i,y+=s,h+=i*s,v+=i*i;for(isNaN(n=(_*h-l*y)/(_*v-l*l))&&(n=0),o=(y-n*l)/_,r=0;r<_;r++)s=n*(i=p[r])+o,c[r]=[i,s],d[r]=i,f[r]=s;return{xData:d,yData:f,values:c}},e.defaultOptions=s(r.defaultOptions,{params:{period:void 0,index:3}}),e}(r);return i(p.prototype,{nameBase:"Trendline",nameComponents:!1}),t.registerSeriesType("trendline",p),p}),n(e,"masters/indicators/trendline.src.js",[],function(){})},t.exports?(i.default=i,t.exports=i):void 0===(r=(function(t){return i(t),i.Highcharts=t,i}).apply(e,[n(78840),n(50496)]))||(t.exports=r)}}]);

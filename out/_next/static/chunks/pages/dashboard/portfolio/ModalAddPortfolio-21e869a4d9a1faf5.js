@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8195],{7928:function(n,o,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/dashboard/portfolio/ModalAddPortfolio",function(){return _(94626)}])}},function(n){n.O(0,[5445,1228,8907,6556,696,4544,4626,9774,2888,179],function(){return n(n.s=7928)}),_N_E=n.O()}]);

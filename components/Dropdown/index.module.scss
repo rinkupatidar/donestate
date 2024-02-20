@@ -1,0 +1,44 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+.container {
+  composes: button is-small from global;
+  position: relative;
+  overflow: initial !important;
+  .dropdown_wrapper {
+    position: absolute;
+    z-index: 100;
+    bottom: -10%;
+    transform: translateY(100%);
+    width: max-content;
+    overflow-y: auto;
+    .dropdown {
+      padding: 0.25rem;
+      border-radius: $radius;
+      background-color: $black-bis;
+      border: 1px solid $grey-darkest;
+      .dropdown_item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.25rem;
+        color: $grey;
+        transition: color $trans;
+        border-radius: $radius;
+        svg {
+          path {
+            transition: fill $trans, stroke $trans;
+            fill: $grey;
+          }
+        }
+        &:hover {
+          color: $white;
+          background-color: $grey-darkest;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

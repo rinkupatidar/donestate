@@ -1,0 +1,20 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+.container {
+    composes: columns is-centered mb-0 from global;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    height: calc(100vh - $navbar-height - $footer-height);
+    .info_wrapper {
+        padding: 1.5rem;
+        margin: 0 auto;
+        width: 30vw;
+        @include mobile {
+            min-width: 100vw;
+        }
+        border: 1px solid $grey-darkest;
+        border-radius: $radius-large;
+        background-color: bulmaLighten($black, 2%);
+    }
+}

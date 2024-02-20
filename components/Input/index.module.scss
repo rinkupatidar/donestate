@@ -1,0 +1,126 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+$active-label-font-size: 10px;
+$input-initial: $grey-lighter;
+$padding-left: 0.5rem;
+$active-top-displacement: -12px;
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: 0;
+        padding: 22px 34px 10px 10px;
+        border-width: 0;
+        border-radius: 5px;
+        border: 1px solid $input-initial;
+        box-shadow: none;
+        color: $dark;
+        font-size: 1rem;
+        background-color: transparent;
+
+        &:placeholder-shown ~ label {
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            transform: translateY(0%);
+            left: $padding-left;
+            font-size: 12px;
+            color: $grey-light;
+        }
+
+        &:placeholder-shown ~ .icon {
+            opacity: 0;
+        }
+
+        &:hover ~ .icon {
+            opacity: 1;
+        }
+        &:hover ~ label {
+            font-size: $active-label-font-size;
+            transform: translateY($active-top-displacement);
+            color: $grey;
+        }
+        &:focus {
+            border-color: $grey-light;
+        }
+
+        &:focus ~ .icon {
+            opacity: 1;
+        }
+        &:focus ~ label {
+            font-size: $active-label-font-size;
+            transform: translateY($active-top-displacement);
+            color: $grey;
+        }
+
+        &:-webkit-autofill ~ label {
+            font-size: $active-label-font-size;
+            transform: translateY($active-top-displacement);
+            color: $grey;
+        }
+        &.error {
+            border: 1px solid $danger;
+        }
+    }
+    &.has_icon {
+        input {
+            padding-left: 2rem;
+        }
+    }
+    .error_icon {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        right: 10px;
+    }
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transition: opacity 0.3s ease;
+        opacity: 0.5;
+        svg {
+            fill: rgb(206, 77, 77) !important;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: $padding-left;
+        width: 100%;
+        height: 100%;
+        transition-property: font-size, transform, color;
+        transition-timing-function: ease;
+        transition-duration: 0.2s;
+        cursor: text;
+        font-size: $active-label-font-size;
+        color: $grey-light;
+        transform: translateY($active-top-displacement);
+        will-change: transform, font-size, color;
+        font-weight: bold;
+        user-select: none;
+        pointer-events: none;
+    }
+    &.is_normal {
+        height: 48px;
+        line-height: 48px;
+    }
+    &.is_small {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+.help {
+    font-size: 0.65rem;
+    margin-top: 0.3rem;
+    line-height: 1.5;
+    color: $danger;
+    font-weight: 500;
+    margin-left: 3px;
+}

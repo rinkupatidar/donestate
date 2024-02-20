@@ -1,0 +1,16 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+@import '/styles/sass/utilities/mixins.sass';
+.bg {
+    background: '#5d1600';
+  }
+  .highcharts-background{
+    height: 200px !important;
+    background-color: aqua;
+  }
+  .pieChart_bg__oCcJl .highcharts-container{
+    height: 183px !important;
+  }
+  .highcharts-root{
+    width: 260px !important;
+    height: 160px !important;
+  }

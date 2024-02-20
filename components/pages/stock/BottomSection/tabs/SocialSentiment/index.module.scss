@@ -1,0 +1,5 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+.summary_grid {
+    background-color: bulmaRgba($success-dark, 0.3);
+    background-color: bulmaRgba($dark, 0.6);
+}

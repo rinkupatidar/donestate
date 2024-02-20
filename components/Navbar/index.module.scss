@@ -1,0 +1,512 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+
+
+
+.navBarMenu {
+  display: none;
+  background-color: #1e2226;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 2rem 2rem !important;
+  margin-top: 63px;
+  height: calc(100vh - 80px);
+  z-index: 50;
+
+  @include mobile {
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .navBtnContainer {
+    margin-top: 1rem;
+  }
+  button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+// .mainLanding {
+//     background: #f6fbff;
+//     color: black;
+//     height: auto;
+//     width: 100vw;
+//     font-family: 'Lato', sans-serif;
+  
+//     > div {
+//       padding: 5rem 3rem;
+  
+//       @include mobile {
+//         padding: 2rem 1.5rem;
+//       }
+//     }
+//   }
+// change the global class navbar
+.landingNavbar1 {
+    box-shadow: 0 2px 18px 0 rgba(129,162,182,.2);
+    // padding: 1rem 13.3rem !important;
+    display: flex;
+    // position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //background-color: #fffcf2;
+    // background-color: #fff0c3;
+    // background-color: #fffbed;
+    background-color: #f6fbff;
+     //background-color: #fffff6;
+    // background-color: #fcfcfc;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    z-index: 999;
+  
+    @include mobile {
+      justify-content: space-between;
+      // padding: 1rem 1rem !important;
+    }
+  
+    @include tablet-only {
+      justify-content: space-between;
+      // padding: 1rem 4rem !important;
+    }
+  
+    .navbarLogo {
+      width: 10rem;
+  
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  
+    .hamburger {
+      display: none;
+      
+  
+      @include tablet-only {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      @include mobile {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      // span {
+      //   background: black;
+      // }
+    }
+    .navBarItemsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+  
+      @include tablet-only {
+        display: none;
+      }
+  
+      @include mobile {
+        display: none;
+      }
+      p {
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+  }
+  .mainLanding {
+    z-index: 100;
+    background: #f6fbff;
+    color: black;
+    height: auto;
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+  
+    > div {
+      // padding: 7rem 3rem;
+  
+      @include mobile {
+        // padding: 2rem 1.5rem;
+      }
+    }
+  }
+  .Maxwidth{
+    max-width: 1300px;
+    padding: 0px 40px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Maxwidth1{
+    max-width: 1300px;
+    padding: 0px 40px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.landingNavbar {
+    // padding: 1rem 13.3rem !important;
+    // padding: 1rem 2.3rem !important;
+    // padding: 0px 40px !important;
+
+    display: flex;
+    // position: static;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //background-color: #fffcf2;
+    // background-color: #fff0c3;
+    // background-color: #fffbed;
+    background-color: #f6fbff;
+     //background-color: #fffff6;
+    // background-color: #fcfcfc;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    z-index: 999;
+  
+    @include mobile {
+      justify-content: space-between;
+      // padding: 1rem 1rem !important;
+    }
+  
+    @include tablet-only {
+      justify-content: space-between;
+      // padding: 1rem 4rem !important;
+    }
+  
+    .navbarLogo {
+      width: 10rem;
+  
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  
+    .hamburgernew {
+       //display: flex;
+      //flex-direction: column;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+     display: none;
+
+      @include tablet-only {
+        display: flex;
+        margin-bottom: 10px;
+      }
+  
+      @include mobile {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      span {
+          background: $black;
+          border-radius: 10px;
+          height: 3px;
+          margin: 3px 0;
+          transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+  
+      @include tablet-only {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      @include mobile {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      span {
+        background: black;
+      }
+    }
+    .navBarItemsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+  
+      @include tablet-only {
+        display: none;
+      }
+  
+      @include mobile {
+        display: none;
+      }
+      p {
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+  }
+.navBarItemsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+
+    @include tablet-only {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+    p {
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+.navbarLogo {
+    width: 10rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+.navbar {
+  
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    // background-color:$scheme-main-new;
+    background-color: $scheme-main;
+    border-bottom: $general-border;
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+    .navbar_item {
+       
+        cursor: pointer;
+        padding: 0.75rem 0.75rem;
+        height: min-content;
+        display: flex;
+        align-items: center;
+        border-radius: $radius;
+        svg {
+          fill: $white;
+      }
+        &:hover {
+            background-color: $black-bis;
+            // background-color:  #edeef1;
+        }
+    }
+    .middle {
+        flex-grow: 1;
+        padding: 0 2rem;
+    }
+}
+.navbarNew {
+  position: fixed;
+  // top: 0;
+  z-index: 100;
+  width: 100%;
+  // background-color:$scheme-main-new;
+  // background-color: $scheme-main;
+  // border-bottom: $general-border;
+  // height: $navbar-height;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  .navbar_item {
+     
+      cursor: pointer;
+      padding: 0.75rem 0.75rem;
+      height: min-content;
+      display: flex;
+      align-items: center;
+      border-radius: $radius;
+      svg {
+        fill: $white;
+    }
+      &:hover {
+          background-color: $black-bis;
+          // background-color:  #edeef1;
+      }
+  }
+  .middle {
+      flex-grow: 1;
+      padding: 0 2rem;
+  }
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    p {
+        background: $white;
+        border-radius: 10px;
+        height: 3px;
+        margin: 3px 0;
+        transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        
+    }
+    span {
+      background: $black;
+      border-radius: 10px;
+      height: 3px;
+      margin: 3px 0;
+      transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      
+  }
+
+    .line_1 {
+        width: 50%;
+       
+    }
+
+    .line_2 {
+        width: 100%;
+    }
+
+    .line_3 {
+        width: 75%;
+    }
+
+    &.checked > .line_1 {
+        transform-origin: bottom;
+        transform: rotatez(45deg) translate(3px, 1px);
+    }
+
+    &.checked > .line_2 {
+        transform-origin: top;
+        transform: rotatez(-45deg);
+    }
+
+    &.checked > .line_3 {
+        transform-origin: bottom;
+        width: 50%;
+        transform: translate(10px, -5px) rotatez(45deg);
+    }
+}
+
+.menu_wrapper {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    width: max-content;
+    min-width: 160px;
+    left: 0;
+    // z-index: 1;
+    .menu {
+        padding: 0.5rem;
+        border-radius: $radius;
+        background-color: $black-bis;
+      border: 1px solid $grey-darkest;
+        .menu_item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            color: $grey;
+            transition: color $trans;
+            border-radius: $radius;
+            svg {
+                path {
+                    transition: fill $trans, stroke $trans;
+                    fill: $grey;
+                }
+            }
+            &:hover {
+                color: $white;
+                background-color: $grey-darkest;
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+        .menu_item1 {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.5rem;
+          color: $grey;
+          transition: color $trans;
+          border-radius: $radius;
+          svg {
+              path {
+                  transition: fill $trans, stroke $trans;
+                  fill: $grey;
+              }
+          }
+          // &:hover {
+          //     color: $white;
+          //     background-color: $grey-darkest;
+          //     svg {
+          //         path {
+          //             fill: $white;
+          //         }
+          //     }
+          // }
+      }
+        .menu_item_new {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.5rem;
+          // color: $grey-light;
+          color:'#efeded';
+          transition: color $trans;
+          border-radius: $radius;
+          svg {
+              path {
+                  transition: fill $trans, stroke $trans;
+                  fill: $grey;
+              }
+          }
+          &:hover {
+              color: $white;
+              background-color: $grey-darkest;
+              font-size: 17px;
+              width: 100%;
+              svg {
+                  path {
+                      fill: $white;
+                  }
+              }
+          }
+      }
+      .plus{
+        width: 35px;
+    height: 35px;
+    padding: 7px;
+    
+       
+        &:hover {
+          border-radius: 30px;
+          width: 35px;
+    height: 35px;
+    padding: 7px;
+            color: $white;
+            background-color: $grey-darkest;
+           
+        }
+    }
+    }
+}

@@ -1,0 +1,8 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.6fr .4fr;
+  gap: $general-gap;
+  margin-bottom: $general-gap;
+}

@@ -1,0 +1,142 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+.navbarItemNew
+{
+      padding: 1rem 1rem;
+      white-space: nowrap;
+}
+      
+.navbarItemNew:hover
+{
+    color:'#0d96f8';
+    width:1390px;
+    border-radius: 8px;
+    @include tablet-only {
+      width:600px;
+    }
+  
+}
+.Maxwidth{
+    max-width: 1300px;
+    padding: 0px 40px !important;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile {
+        width: 100%;
+      }
+      @include tablet-only {
+        width: 100%;
+      }
+  }
+
+.container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    // font-size: 1rem;
+    font-size: $size-8;
+    @include mobile {
+        display: block;
+      }
+      @include tablet-only {
+        display: block;
+      }
+    
+}
+
+.item {
+    composes: navbar-item from global;
+    padding: 0.75rem;
+    font-weight: $weight-bold;
+
+    border-radius: $radius !important;
+    a {
+        border-radius: $radius !important;
+    }
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+        // background-color: bulmaLighten($black, 8%);
+    }
+}
+.navbar-item:hover {
+    color: #000;
+    font-size: 16px;
+    width: 1390px;
+    line-height: 56px;
+    background-color: #fff;
+    height: 56px;
+    padding: 0 24px;
+}
+
+.item_dropdown {
+    composes: has-dropdown is-hoverable from global;
+    @extend .item;
+
+    transition: background 0.2s ease-in-out;
+    a {
+        transition: color 0.2s ease-in-out;
+        &::after {
+            transition: border-color 0.2s ease-in-out;
+        }
+    }
+    &:hover {
+        background-color:'transparent';
+        a {
+            color: $blue !important;
+            &::after {
+                border-color: $blue !important;
+            }
+        }
+    }
+
+    :global {
+        .navbar-dropdown {
+            padding: 0;
+            // opacity: 1;
+            // pointer-events: all;
+            // box-shadow: 0px 20px 20px bulmaRgba($black, 1);
+            width: 100vw;
+            left: 0;
+            position: fixed;
+            top: calc($navbar-height - 20px);
+            border: 0;
+            z-index: 100;
+            background-color: transparent;
+        }
+        .navbar-dropdown-wrapper {
+            display: flex;
+            margin-top: 20px;
+            padding: 1rem 1rem;
+            background-color: bulmaLighten(#e7e9ed, 2%);
+            box-shadow: 0 19px 21px -1px rgba(0,0,0,.18);
+            border-radius: 8px;
+            .left {
+                width: 50%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .navbar-item {
+                    padding: 2rem 2rem;
+                    margin: 0 1.5rem;
+                    text-align: center;
+                    border-top: 1px solid $grey-dark;
+                    border-radius: 0;
+                    font-size: 1rem;
+                    cursor: pointer !important;
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        border-top: 0;
+                    }
+                    transition: color 0.2s ease-in-out;
+                    &:hover {
+                        color: $info;
+                    }
+                }
+            }
+            .right {
+                width: 50%;
+                padding: 5rem;
+                background-color: bulmaLighten($black, 5%);
+            }
+        }
+    }
+}

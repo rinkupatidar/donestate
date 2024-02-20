@@ -1,0 +1,32 @@
+@import '/styles/sass/utilities/derived-variables.sass';
+
+.list_wrapper {
+  flex-grow: 1;
+  position: relative;
+  overflow: auto;
+  .list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    .item {
+      font-size: 14px;
+      padding: 2px 4px;
+      border-radius: $radius-small;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      align-items: center;
+      &:hover {
+        background-color: $grey-darkest;
+      }
+      &[data-selected='true'] {
+        background-color: $warning;
+        color: $black;
+        font-weight: $weight-semibold;
+        svg {
+          fill: $black !important;
+        }
+      }
+    }
+  }
+}

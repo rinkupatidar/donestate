@@ -1,0 +1,31 @@
+@import "/styles/sass/utilities/derived-variables.sass";
+@import "/styles/sass/utilities/mixins.sass";
+.container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $yellow;
+    border-radius: $radius;
+    height: fit-content;
+    font-size: $size-7;
+    .item {
+        padding: 0.5em 1em;
+        border-right: 1px solid $yellow;
+        position: relative;
+        color: $yellow;
+        transition: color $trans;
+        cursor: pointer;
+        &.is_active {
+            color: $black;
+        }
+        &:last-child {
+            border-right: 0px;
+        }
+        .floating_bg {
+            @include overlay;
+            position: absolute;
+            background-color: $yellow;
+            z-index: -1;
+        }
+    }
+}
